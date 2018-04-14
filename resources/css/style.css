@@ -1,7 +1,26 @@
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* Universal styles */
 body {
   font-size: 16px;
   line-height: 1;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .flex-row {
@@ -18,6 +37,10 @@ body {
   width: 60%;
 }
 
+.secondary {
+  width: 40%;
+}
+
 img {
   height: auto;
   width: 100%;
@@ -26,20 +49,39 @@ img {
 h1 {
   font-size: 3rem;
   font-weight: bold;
+  color: rgb(86, 79, 79);
 }
 
 h2 {
   font-size: 2rem;
 }
 
+h3,
 h4 {
   font-size: 1.5rem;
 }
+
+section {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(161, 161, 161);
+}
+
+a:hover {
+  color: black;
+}
+
+
 /* Header section */
-header {
+header, footer {
   align-items: center;
   justify-content: space-between;
   height: 4rem;
+  background-color: #fafafa;
+
 }
 
 .flex-row .logo {
@@ -55,9 +97,32 @@ header {
   font-size: 1.5rem;
 }
 
+.logo img {
+  color: rgb(93, 204, 216);
+}
+
+.logo span {
+  color: rgb(93, 204, 216);
+}
 .logo strong {
   font-weight: bold;
-  color: blue;
+  color: rgb(161, 226, 185);
+}
+
+#signin {
+  color: rgb(255, 255, 255);
+    font-family: Favorit, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 9px;
+    padding: 6px 24px;
+    background: rgb(31, 197, 236);
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 9999px;
 }
 
 .menu {
@@ -69,44 +134,49 @@ header {
   margin-right: 1.5rem;
 }
 
-header a {
-  text-decoration: none;
-  color: black;
-}
-
 .mobile-nav {
   display: none;
 }
 
 /* Jumbotron Section */
-section {
-  width: 100%;
-}
-
 #jumbotron {
-  background-color: lightgray;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 #jumbotron .secondary {
   justify-content: center;
 }
-.secondary {
-  width: 40%;
-}
 
 #jumbotron h1, #jumbotron h3 {
-  margin-bottom: 1.33rem;
+  margin-bottom: 1.5rem;
 }
 
 .btn {
-  background-color: red;
-  padding: 0.5rem;
-  color: white;
-  text-align: center;
-  width: 50%;
-
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: rgba(2, 189, 165, 0.4) 0px 3px 9px;
+  padding: 9px 36px;
+  background: linear-gradient(to right, rgb(137, 241, 212), rgb(31, 197, 236));
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  border-radius: 9999px;
+  width: 30%;
 }
 
+#button h4 {
+  color: white;
+}
+.main img {
+  opacity: 0.8;
+}
+
+.secondary h3 {
+  color: rgb(161, 161, 161);
+}
 /* Headlines Section */
 .mobile {
   display: none;
@@ -143,7 +213,8 @@ section {
 }
 .headline .text-content {
   width: 65%;
-  padding: 1.5rem;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
 }
 
 .headline h4 {
@@ -184,4 +255,32 @@ section {
 
 .designation {
   padding: 0.5rem 0;
+}
+
+/* Exhibit Section */
+#exhibits .main .text-content {
+  margin-top: 1.5rem;
+}
+
+#exhibits .secondary {
+  margin-top: 1rem;
+}
+
+#exhibits h2 {
+  font-weight: bold;
+  padding-top: 1.5rem;
+}
+
+#exhibits h4 {
+  padding-top: 0.5rem;
+}
+
+/* Footer */
+footer h5 {
+  margin-left: 1.5rem;
+}
+
+footer span {
+  padding-right: 1rem;
+  margin-right: 1.5rem;
 }
