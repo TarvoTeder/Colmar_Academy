@@ -7,7 +7,6 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* latin */
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -19,7 +18,7 @@
 /* Universal styles */
 body {
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.25;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -54,11 +53,17 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  color: rgb(86, 79, 79);
 }
 
 h3,
 h4 {
   font-size: 1.5rem;
+  color: rgb(161, 161, 161);
+}
+
+h5 {
+  color: rgb(161, 161, 161);
 }
 
 section {
@@ -69,11 +74,6 @@ a {
   text-decoration: none;
   color: rgb(161, 161, 161);
 }
-
-a:hover {
-  color: black;
-}
-
 
 /* Header section */
 header, footer {
@@ -94,19 +94,32 @@ header, footer {
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .logo img {
   color: rgb(93, 204, 216);
 }
 
-.logo span {
+.logo span a {
   color: rgb(93, 204, 216);
 }
 .logo strong {
   font-weight: bold;
   color: rgb(161, 226, 185);
+}
+
+.menu {
+  margin-right: 1.5rem;
+}
+
+.menu li {
+  display: inline;
+  margin-right: 1.5rem;
+}
+
+nav a:hover {
+  color: rgb(13, 13, 13);
 }
 
 #signin {
@@ -125,22 +138,13 @@ header, footer {
     border-radius: 9999px;
 }
 
-.menu {
-  margin-right: 1.5rem;
-}
-
-.menu li {
-  display: inline;
-  margin-right: 1.5rem;
-}
-
 .mobile-nav {
   display: none;
 }
 
 /* Jumbotron Section */
 #jumbotron {
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 #jumbotron .secondary {
@@ -181,7 +185,9 @@ header, footer {
 .mobile {
   display: none;
 }
-
+#headlines {
+  background-color: #fafafa;
+}
 #headlines .main {
   border-right: 1px solid gray;
 }
@@ -211,6 +217,9 @@ header, footer {
   padding: 1rem;
   border-bottom: 1px solid gray;
 }
+.headline:hover {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
 .headline .text-content {
   width: 65%;
   padding-left: 1.5rem;
@@ -221,7 +230,14 @@ header, footer {
   margin: 1rem 0;
 }
 
+.headline a:hover {
+  color: rgb(13, 13, 13);
+}
 /* Courses Section */
+#courses {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
 .section-title {
   margin: 2rem;
   text-align: center;
@@ -237,6 +253,11 @@ header, footer {
   width: 30%;
   margin: 0 1rem 2rem 1rem;
   color: gray;
+  background: #fafafa;
+}
+
+.course:hover {
+  background: white;
 }
 
 .course .image-content {
@@ -250,7 +271,6 @@ header, footer {
 
 #courses h2 {
   font-weight: bold;
-  color: black;
 }
 
 .designation {
@@ -258,6 +278,10 @@ header, footer {
 }
 
 /* Exhibit Section */
+#exhibits {
+  background: #fafafa;
+}
+
 #exhibits .main .text-content {
   margin-top: 1.5rem;
 }
@@ -283,4 +307,8 @@ footer h5 {
 footer span {
   padding-right: 1rem;
   margin-right: 1.5rem;
+}
+
+footer div a:hover {
+  color: rgb(13, 13, 13);
 }
