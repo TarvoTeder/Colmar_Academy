@@ -38,6 +38,7 @@ body {
 
 .secondary {
   width: 40%;
+  padding-top: 1rem;
 }
 
 img {
@@ -75,15 +76,18 @@ a {
   color: rgb(161, 161, 161);
 }
 
-/* Header section */
 header, footer {
   align-items: center;
   justify-content: space-between;
   height: 4rem;
-  background-color: #fafafa;
-
+  background-color: rgb(250, 250, 250);
 }
 
+#jumbotron, #courses, .headline:hover {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Header section */
 .flex-row .logo {
   margin-left: 1.5rem;
 }
@@ -97,23 +101,16 @@ header, footer {
   font-size: 2rem;
 }
 
-.logo img {
+.logo img, .logo span a {
   color: rgb(93, 204, 216);
 }
 
-.logo span a {
-  color: rgb(93, 204, 216);
-}
 .logo strong {
   font-weight: bold;
   color: rgb(161, 226, 185);
 }
 
-.menu {
-  margin-right: 1.5rem;
-}
-
-.menu li {
+.menu, .menu li {
   display: inline;
   margin-right: 1.5rem;
 }
@@ -138,15 +135,15 @@ nav a:hover {
     border-radius: 9999px;
 }
 
+.tablet-nav {
+  display: none;
+}
+
 .mobile-nav {
   display: none;
 }
 
 /* Jumbotron Section */
-#jumbotron {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
-
 #jumbotron .secondary {
   justify-content: center;
 }
@@ -172,24 +169,21 @@ nav a:hover {
 }
 
 #button h4 {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .main img {
   opacity: 0.8;
 }
 
-.secondary h3 {
-  color: rgb(161, 161, 161);
-}
 /* Headlines Section */
 .mobile {
   display: none;
 }
 #headlines {
-  background-color: #fafafa;
+  background-color: rgb(250, 250, 250);
 }
 #headlines .main {
-  border-right: 1px solid gray;
+  border-right: 1px solid rgb(192,192,192);
 }
 
 #headlines .main h1 {
@@ -204,10 +198,6 @@ nav a:hover {
   font-weight: bold;
 }
 
-#headlines .secondary {
-  padding-top: 1rem;
-}
-
 .image-content {
   height: auto;
   width: 35%;
@@ -215,11 +205,9 @@ nav a:hover {
 
 .headline {
   padding: 1rem;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(192,192,192);
 }
-.headline:hover {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
+
 .headline .text-content {
   width: 65%;
   padding-left: 1.5rem;
@@ -234,12 +222,8 @@ nav a:hover {
   color: rgb(13, 13, 13);
 }
 /* Courses Section */
-#courses {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
-
 .section-title {
-  margin: 2rem;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -253,11 +237,11 @@ nav a:hover {
   width: 30%;
   margin: 0 1rem 2rem 1rem;
   color: gray;
-  background: #fafafa;
+  background: rgb(250, 250, 250);
 }
 
 .course:hover {
-  background: white;
+  background: rgb(255,255,255);
 }
 
 .course .image-content {
@@ -279,24 +263,15 @@ nav a:hover {
 
 /* Exhibit Section */
 #exhibits {
-  background: #fafafa;
+  background: rgb(250, 250, 250);
 }
 
 #exhibits .main .text-content {
-  margin-top: 1.5rem;
-}
-
-#exhibits .secondary {
-  margin-top: 1rem;
+  padding-top: 1rem;
 }
 
 #exhibits h2 {
   font-weight: bold;
-  padding-top: 1.5rem;
-}
-
-#exhibits h4 {
-  padding-top: 0.5rem;
 }
 
 /* Footer */
@@ -311,4 +286,86 @@ footer span {
 
 footer div a:hover {
   color: rgb(13, 13, 13);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+  .menu ul {
+    display: none;
+  }
+
+  .menu ul.tablet-nav {
+    display: block;
+  }
+
+  .dropdown .dropbtn {
+      font-size: 1.5rem;
+      border: none;
+      outline: none;
+      color: rgb(86, 79, 79);
+      padding: 0.9rem 1rem;
+      background-color: inherit;
+      font-family: inherit;
+      margin-right: 2.5rem;
+    }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(250, 250, 250);
+    min-width: 10rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: rgb(86, 79, 79);
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+
+  .dropdown-content a:hover {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+
+  section {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .main, .secondary {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .btn {
+    width: 50%;
+    margin-bottom: 2rem;
+    align-self: center;
+  }
+
+  #headlines .main {
+    margin-bottom: 2rem;
+  }
+
+  .course {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  #jumbotron .secondary h1 {
+    text-align: center;
+  }
+
+
 }
