@@ -165,7 +165,8 @@ nav a:hover {
   border-color: initial;
   border-image: initial;
   border-radius: 9999px;
-  width: 30%;
+  width: auto;
+  margin-right: 3rem;
 }
 
 #button h4 {
@@ -290,7 +291,8 @@ footer div a:hover {
 
 /* Media Queries */
 @media only screen and (max-width: 900px) {
-  .menu ul {
+  .menu ul,
+  #exhibits .secondary {
     display: none;
   }
 
@@ -306,14 +308,21 @@ footer div a:hover {
       padding: 0.9rem 1rem;
       background-color: inherit;
       font-family: inherit;
-      margin-right: 2.5rem;
+      margin-right: 2rem;
+    }
+
+  .icon {
+      width: 35px;
+      height: 5px;
+      background-color: rgb(86, 79, 79);
+      margin: .25rem 0;
     }
 
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: rgb(250, 250, 250);
-    min-width: 10rem;
+    min-width: 7.5rem;
     box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -342,19 +351,20 @@ footer div a:hover {
     align-items: center;
   }
 
-  .main, .secondary {
+  .main,
+  .secondary {
     width: 100%;
     padding: 0;
     text-align: center;
   }
   .btn {
-    width: 50%;
     margin-bottom: 2rem;
     align-self: center;
   }
 
   #headlines .main {
     margin-bottom: 2rem;
+    border-right: none;
   }
 
   .course {
@@ -363,9 +373,63 @@ footer div a:hover {
 }
 
 @media only screen and (max-width: 740px) {
-  #jumbotron .secondary h1 {
+  .course {
+    width: 100%;
+  }
+
+  .text-content {
     text-align: center;
   }
 
+  .course .image-content {
+    display: none;
+  }
+}
 
+@media only screen and (max-width: 540px) {
+  header span,
+  .menu ul.tablet-nav,
+  footer span,
+  #headlines .main,
+  .logo,
+  img.desktop,
+  #courses h4,
+  #exhibits .text-content {
+    display: none;
+  }
+
+  .menu ul.mobile-nav {
+    display: flex;
+    padding: 0 2rem;
+  }
+
+  .mobile-nav img {
+    height: 2.5rem;
+    width: auto;
+    margin: 0 1.55rem; /*could not get justify-content: space-between to work in .menu ul.mobile-nav */
+  }
+
+  #jumbotron .secondary {
+    margin: 2rem 1rem;
+  }
+
+  .headline {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 0;
+  }
+
+  .headline .image-content {
+    width: 100%;
+    height: auto;
+  }
+
+  img.mobile {
+    display: block;
+  }
+
+  .video-content {
+    margin-bottom: 1.5rem;
+  }
 }
