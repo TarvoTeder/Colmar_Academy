@@ -126,7 +126,7 @@ nav a:hover {
     font-weight: bold;
     text-transform: uppercase;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 9px;
-    padding: 6px 24px;
+    padding: 0.5rem 1.5rem;
     background: rgb(31, 197, 236);
     border-width: 0px;
     border-style: initial;
@@ -398,19 +398,15 @@ footer div a:hover {
     display: none;
   }
 
-  .menu ul.mobile-nav {
+  .menu .mobile-nav {
     display: flex;
-    padding: 0 2rem;
+    justify-content: space-around;
   }
 
   .mobile-nav img {
     height: 2.5rem;
     width: auto;
-    margin: 0 1.55rem; /*could not get justify-content: space-between to work in .menu ul.mobile-nav */
-  }
-
-  #jumbotron .secondary {
-    margin: 2rem 1rem;
+    margin: 0 1rem;
   }
 
   .headline {
@@ -432,4 +428,5 @@ footer div a:hover {
   .video-content {
     margin-bottom: 1.5rem;
   }
+
 }
